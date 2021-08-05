@@ -31,15 +31,12 @@ public class RepeatSubmitAspect {
         long lockTime = noRepeatSubmit.lockTime();
         String sign = "";
         try {
-            // 根据方法名、参数 生成sign
             sign = createSign(pjp);
 
-            // 参数之前是否有提交，有则重复
             boolean success = KEY.add(sign);
             if (!success) {
                 throw new Exception("不能重复提交");
             }
-            // 执行原方法
             return pjp.proceed();
         } finally {
             // 注解锁定时间内不能重复提交
