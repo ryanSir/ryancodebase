@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 允许一个或者多个操作应用到一组对象上，解耦操作和对象本身
+ * 
  * @author Ryan
  * @version Id: ToolApplication, v 0.1 2021/9/17 下午2:29 ryan Exp $
  */
@@ -17,8 +19,8 @@ public class ToolApplication {
             //            extractor.extract2txt(resourceFile);
             resourceFile.accept(extractor);
         }
-        Compressor compressor  = new Compressor();
-        for (ResourceFile resourceFile:resourceFiles){
+        Compressor compressor = new Compressor();
+        for (ResourceFile resourceFile : resourceFiles) {
             resourceFile.accept(compressor);
         }
     }
