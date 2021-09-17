@@ -1,6 +1,8 @@
 package com.ryan.codebase.design.pattern.action.responsibility;
 
 /**
+ * 职责链模式
+ *
  * @author Ryan
  * @version Id: Application, v 0.1 2021/9/17 下午4:14 ryan Exp $
  */
