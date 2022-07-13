@@ -1,0 +1,17 @@
+package com.ryan.codebase.design.pattern.action.observable;
+
+/**
+ * @author ryan
+ * @version Id: Team, v 0.1 2021/12/30 10:31 PM ryan Exp $
+ */
+public class Team implements Watcher{
+
+    @Override
+    public void onEvent(String event) {
+        if ("乱劈风卷".equals(event)){
+            System.out.println("乱劈风卷，团灭...");
+            return;
+        }
+        // nothing todo
+    }
+}
