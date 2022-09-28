@@ -18,7 +18,7 @@ public class ProxyFactory {
         return Proxy.newProxyInstance(o.getClass().getClassLoader(), interfaces, handle);
     }
 
-    private class DynamicProxyHandler implements InvocationHandler {
+    private  class DynamicProxyHandler implements InvocationHandler {
 
         private Object proxy;
 
@@ -26,7 +26,9 @@ public class ProxyFactory {
             this.proxy = o;
         }
 
+        @Override
         public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+            System.out.println("start");
             Object o = method.invoke(this.proxy, args);
             metricsRecord.record();
             System.out.println(args[0]);

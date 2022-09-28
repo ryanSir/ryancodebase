@@ -6,6 +6,7 @@ package com.ryan.codebase.design.pattern.structural.proxy;
  */
 public class IUserService implements UserService {
 
+    @Override
     public void login(String a) {
         System.out.println("login..." + a);
     }

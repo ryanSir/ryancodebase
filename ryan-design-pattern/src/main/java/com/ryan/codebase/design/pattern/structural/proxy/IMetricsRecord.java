@@ -6,6 +6,7 @@ package com.ryan.codebase.design.pattern.structural.proxy;
  */
 public class IMetricsRecord implements MetricsRecord {
 
+    @Override
     public void record() {
         System.out.println("record ...");
     }

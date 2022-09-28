@@ -6,6 +6,7 @@
     <modules>
         <module>ryan-design-pattern</module>
         <module>ryan-common-utils</module>
+        <module>architect</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
